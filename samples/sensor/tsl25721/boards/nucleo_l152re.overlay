@@ -4,11 +4,11 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-&feather_i2c {
+&i2c1 {
 	tsl25721@60 {
 		compatible = "ams,tsl25721";
 		reg = <0x60>;
-		int-gpios = <&feather_header 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+		int-gpios = <&gpioa 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
 		led-current = <200>;
 		led-duty-cycle = <320>;
 		proximity-it = "8";

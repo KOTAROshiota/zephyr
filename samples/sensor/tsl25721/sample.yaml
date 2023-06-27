@@ -3,8 +3,8 @@ sample:
 tests:
   sample.sensor.tsl25721:
     harness: sensor
-    platform_allow: adafruit_feather_stm32f405
+    platform_allow: adafruit_feather_nucleo_l152re  
     integration_platforms:
-      - adafruit_feather_stm32f405
+      - adafruit_feather_nucleo_l152re
     tags: sensors
     filter: dt_compat_enabled("ams,tsl25721")
