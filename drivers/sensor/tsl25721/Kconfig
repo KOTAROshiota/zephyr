@@ -6,7 +6,7 @@
 menuconfig TSL25721
 	bool "TSL25721 Proximity and Ambient Light Sensor"
 	default y
-	depends on DT_HAS_VISHAY_TSL25721_ENABLED
+	depends on DT_HAS_AMS_TSL25721_ENABLED
 	select I2C
 	help
 	  Enable driver for TSL25721 sensors.

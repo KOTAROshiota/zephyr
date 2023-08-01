@@ -7,6 +7,7 @@
 &i2c1 {
 	tsl25721@60 {
 		compatible = "ams,tsl25721";
+		status = "okay";
 		reg = <0x60>;
 		int-gpios = <&gpioa 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
 		led-current = <200>;

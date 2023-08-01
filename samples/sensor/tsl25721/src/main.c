@@ -26,9 +26,9 @@ static void print_proxy_data(const struct device *dev)
 		return;
 	}
 
-	printf("Proximity: %d\n", (uint16_t) pdata.val1);
+	//printf("Proximity: %d\n", (uint16_t) pdata.val1);
 }
-#if defined(CONFIG_VCNL4040_ENABLE_ALS)
+#if defined(CONFIG_TSL25721_ENABLE_ALS)
 static void print_als_data(const struct device *dev)
 {
 	struct sensor_value val;
@@ -50,7 +50,7 @@ static void test_polling_mode(const struct device *dev)
 			printf("sample update error.\n");
 		} else {
 			print_proxy_data(dev);
-#if defined(CONFIG_VCNL4040_ENABLE_ALS)
+#if defined(CONFIG_TSL25721_ENABLE_ALS)
 			print_als_data(dev);
 #endif
 		}
@@ -62,7 +62,7 @@ static void test_polling_mode(const struct device *dev)
 	} while (remaining_test_time > 0);
 }
 
-#if defined(CONFIG_VCNL4040_TRIGGER)
+#if 0 //defined(CONFIG_TSL25721_TRIGGER)
 static void trigger_handler(const struct device *dev,
 			    const struct sensor_trigger *trig)
 {
@@ -85,7 +85,7 @@ static void trigger_handler(const struct device *dev,
 
 static void test_trigger_mode(const struct device *dev)
 {
-#if defined(CONFIG_VCNL4040_TRIGGER)
+#if 0 //defined(CONFIG_TSL25721_TRIGGER)
 	struct sensor_trigger trig;
 	struct sensor_value attr;
 

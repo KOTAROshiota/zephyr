@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-#define DT_DRV_COMPAT ams_tsl25721.c
+#define DT_DRV_COMPAT ams_tsl25721
 
 #include "tsl25721.h"
 #include <zephyr/pm/device.h>
